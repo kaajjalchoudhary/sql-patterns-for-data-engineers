@@ -1,0 +1,5 @@
+customer_id,tier,valid_from,valid_to,is_current
+1,bronze,2025-01-01,2025-01-03,false
+1,silver,2025-01-03,2025-01-05,false
+1,gold,2025-01-05,,true
+2,silver,2025-01-01,,true
