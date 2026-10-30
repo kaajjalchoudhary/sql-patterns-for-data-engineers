@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml/badge.svg)](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml)
 
-Ten SQL patterns that come up again and again in data pipelines and interviews. Each one has
+Eleven SQL patterns that come up again and again in data pipelines and interviews. Each one has
 sample data, a commented query and the expected result, and CI runs every query on DuckDB to
 prove it works.
 
@@ -18,6 +18,7 @@ prove it works.
 | [Funnel conversion](patterns/funnel_conversion/query.sql) | Signup and checkout funnels where step order matters | chained `LEFT JOIN` on time + `lag()` |
 | [Snapshot diff (CDC)](patterns/snapshot_diff/query.sql) | Inserts, updates and deletes between two full extracts | `FULL OUTER JOIN` + `IS DISTINCT FROM` |
 | [Pivot](patterns/pivot/query.sql) | Quarter-by-region reports, wide feature tables | `sum() FILTER (WHERE ...)` |
+| [Cohort retention](patterns/cohort_retention/query.sql) | Monthly retention curves by signup cohort | `date_trunc` + `date_diff` |
 
 ## Run them
 
