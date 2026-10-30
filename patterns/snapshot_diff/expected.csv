@@ -1,0 +1,6 @@
+customer_id,change_type,changed_columns
+2,update,tier
+3,delete,
+5,insert,
+6,update,email
+7,update,tier
