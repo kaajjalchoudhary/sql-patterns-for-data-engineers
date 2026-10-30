@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml/badge.svg)](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml)
 
-Six SQL patterns that come up again and again in data pipelines and interviews. Each one has
+Seven SQL patterns that come up again and again in data pipelines and interviews. Each one has
 sample data, a commented query and the expected result, and CI runs every query on DuckDB to
 prove it works.
 
@@ -14,6 +14,7 @@ prove it works.
 | [Running totals](patterns/running_totals/query.sql) | Cumulative revenue, moving averages | window frames |
 | [Top N per group](patterns/top_n_per_group/query.sql) | Best sellers per category | `row_number()` with a tie-breaker |
 | [SCD Type 2](patterns/scd_type2/query.sql) | Dimension history from snapshots | `IS DISTINCT FROM` + `lead()` |
+| [Date spine](patterns/date_spine/query.sql) | Daily charts with no missing days, cumulative metrics | `generate_series` + `LEFT JOIN` |
 
 ## Run them
 
