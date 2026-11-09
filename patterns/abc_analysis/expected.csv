@@ -1,0 +1,6 @@
+product,revenue,cumulative_share,abc_class
+P1,500.00,0.5,A
+P2,250.00,0.75,A
+P3,120.00,0.87,B
+P4,70.00,0.94,B
+P5,60.00,1.0,C
