@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml/badge.svg)](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml)
 
-Thirteen SQL patterns that come up again and again in data pipelines and interviews. Each one has
+Fifteen SQL patterns that come up again and again in data pipelines and interviews. Each one has
 sample data, a commented query and the expected result, and CI runs every query on DuckDB to
 prove it works.
 
@@ -21,6 +21,8 @@ prove it works.
 | [Cohort retention](patterns/cohort_retention/query.sql) | Monthly retention curves by signup cohort | `date_trunc` + `date_diff` |
 | [Forward fill](patterns/forward_fill/query.sql) | Sparse sensor or price feeds with missing readings | `last_value(... IGNORE NULLS)` |
 | [Merge intervals](patterns/merge_intervals/query.sql) | Room or resource bookings, overlapping outage windows | running `max(end_ts)` + `sum()` |
+| [Orphan records](patterns/orphan_records/query.sql) | Referential integrity checks before loading facts | `NOT EXISTS` (not `NOT IN`) |
+| [Percentiles](patterns/percentiles/query.sql) | Median and p90 latency or delivery times per group | `median()` + `quantile_cont()` |
 
 ## Run them
 
