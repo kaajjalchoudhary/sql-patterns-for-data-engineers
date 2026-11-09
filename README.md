@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml/badge.svg)](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml)
 
-Fifteen SQL patterns that come up again and again in data pipelines and interviews. Each one has
+Seventeen SQL patterns that come up again and again in data pipelines and interviews. Each one has
 sample data, a commented query and the expected result, and CI runs every query on DuckDB to
 prove it works.
 
@@ -23,6 +23,8 @@ prove it works.
 | [Merge intervals](patterns/merge_intervals/query.sql) | Room or resource bookings, overlapping outage windows | running `max(end_ts)` + `sum()` |
 | [Orphan records](patterns/orphan_records/query.sql) | Referential integrity checks before loading facts | `NOT EXISTS` (not `NOT IN`) |
 | [Percentiles](patterns/percentiles/query.sql) | Median and p90 latency or delivery times per group | `median()` + `quantile_cont()` |
+| [As-of join](patterns/asof_join/query.sql) | Pricing trades or events with the latest value at that moment | `ASOF LEFT JOIN` |
+| [ABC analysis](patterns/abc_analysis/query.sql) | Pareto classes for products, customers or SKUs | cumulative `sum()` / total |
 
 ## Run them
 
