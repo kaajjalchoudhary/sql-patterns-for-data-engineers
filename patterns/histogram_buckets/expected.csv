@@ -1,0 +1,5 @@
+bucket_from,bucket_to,orders
+0,50,3
+50,100,1
+100,150,0
+150,200,1
