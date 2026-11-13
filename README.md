@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml/badge.svg)](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml)
 
-Nineteen SQL patterns that come up again and again in data pipelines and interviews. Each one has
+Twenty SQL patterns that come up again and again in data pipelines and interviews. Each one has
 sample data, a commented query and the expected result, and CI runs every query on DuckDB to
 prove it works.
 
@@ -27,6 +27,7 @@ prove it works.
 | [ABC analysis](patterns/abc_analysis/query.sql) | Pareto classes for products, customers or SKUs | cumulative `sum()` / total |
 | [Period over period](patterns/period_over_period/query.sql) | Month-over-month or year-over-year growth | `lag()` + `nullif()` |
 | [Histogram buckets](patterns/histogram_buckets/query.sql) | Distributions of amounts or durations, with empty buckets kept | `floor(x / width)` + `range()` |
+| [Peak concurrency](patterns/peak_concurrency/query.sql) | Max simultaneous sessions, connections or bookings | +1/-1 events + running `sum()` |
 
 ## Run them
 
