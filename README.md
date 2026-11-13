@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml/badge.svg)](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml)
 
-Twenty SQL patterns that come up again and again in data pipelines and interviews. Each one has
+Twenty-one SQL patterns that come up again and again in data pipelines and interviews. Each one has
 sample data, a commented query and the expected result, and CI runs every query on DuckDB to
 prove it works.
 
@@ -28,6 +28,7 @@ prove it works.
 | [Period over period](patterns/period_over_period/query.sql) | Month-over-month or year-over-year growth | `lag()` + `nullif()` |
 | [Histogram buckets](patterns/histogram_buckets/query.sql) | Distributions of amounts or durations, with empty buckets kept | `floor(x / width)` + `range()` |
 | [Peak concurrency](patterns/peak_concurrency/query.sql) | Max simultaneous sessions, connections or bookings | +1/-1 events + running `sum()` |
+| [Missing sequence numbers](patterns/missing_sequence_numbers/query.sql) | Lost messages, skipped batch ids, missing files | `DISTINCT` + `lead()` |
 
 ## Run them
 
