@@ -1,0 +1,3 @@
+customer,orders,order_total,paid_amount,shipments
+acme,2,150.00,150.00,3
+globex,2,280.00,200.00,1
