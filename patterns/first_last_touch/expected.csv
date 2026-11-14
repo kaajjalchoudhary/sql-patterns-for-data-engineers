@@ -1,0 +1,5 @@
+user_id,revenue,first_touch,last_touch
+1,120.00,paid_search,social
+2,45.00,organic,organic
+3,80.00,email,referral
+4,30.00,,

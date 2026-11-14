@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml/badge.svg)](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml)
 
-Twenty-three SQL patterns that come up again and again in data pipelines and interviews. Each one has
+Twenty-four SQL patterns that come up again and again in data pipelines and interviews. Each one has
 sample data, a commented query and the expected result, and CI runs every query on DuckDB to
 prove it works.
 
@@ -31,6 +31,7 @@ prove it works.
 | [Missing sequence numbers](patterns/missing_sequence_numbers/query.sql) | Lost messages, skipped batch ids, missing files | `DISTINCT` + `lead()` |
 | [Collapse repeated states](patterns/collapse_repeated_states/query.sql) | Status heartbeats to state-change periods | `lag()` + `IS DISTINCT FROM` + `lead()` |
 | [Fan-out join](patterns/fan_out_join/query.sql) | Totals across one-to-many joins without double counting | aggregate each child, then `LEFT JOIN` |
+| [First and last touch](patterns/first_last_touch/query.sql) | Marketing attribution for conversions | `row_number()` asc and desc + time filter |
 
 ## Run them
 
