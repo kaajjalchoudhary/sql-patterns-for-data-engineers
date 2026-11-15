@@ -1,0 +1,3 @@
+product,price_id_a,price_id_b,overlap_from,overlap_to
+gizmo,6,7,2025-02-01,2025-02-15
+widget,2,3,2025-06-15,2025-07-01
