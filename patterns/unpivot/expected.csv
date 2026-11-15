@@ -1,0 +1,10 @@
+region,period,revenue
+north,q1,120
+north,q2,135
+north,q3,150
+north,q4,170
+south,q1,90
+south,q3,110
+south,q4,95
+west,q3,40
+west,q4,65
