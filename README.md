@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml/badge.svg)](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml)
 
-Twenty-six SQL patterns that come up again and again in data pipelines and interviews. Each one has
+Thirty-six SQL patterns that come up again and again in data pipelines and interviews. Each one has
 sample data, a commented query and the expected result, and CI runs every query on DuckDB to
 prove it works.
 
@@ -34,6 +34,16 @@ prove it works.
 | [First and last touch](patterns/first_last_touch/query.sql) | Marketing attribution for conversions | `row_number()` asc and desc + time filter |
 | [Unpivot](patterns/unpivot/query.sql) | Wide spreadsheet-style columns to long rows | `CROSS JOIN` column list + `CASE` |
 | [Overlapping ranges](patterns/overlapping_ranges/query.sql) | Validity periods that conflict, e.g. two prices on one day | self-join where each starts before the other ends |
+| [Recursive hierarchy](patterns/recursive_hierarchy/query.sql) | Org charts, category trees, bill of materials | `WITH RECURSIVE` + path string |
+| [Mode per group](patterns/mode_per_group/query.sql) | Each customer's usual payment method or store | `count(*)` then `row_number()` |
+| [Market basket pairs](patterns/market_basket_pairs/query.sql) | Products bought together, cross-sell rules | self-join with `a.product < b.product` |
+| [Source vs target reconciliation](patterns/source_target_reconciliation/query.sql) | Proving a load is complete: counts and totals per day | aggregate both sides + `FULL OUTER JOIN` |
+| [Consecutive growth streaks](patterns/consecutive_growth/query.sql) | Months of uninterrupted growth, winning streaks | `lag()` break flags + running `sum()` |
+| [Weighted average](patterns/weighted_average/query.sql) | Averages over pre-aggregated rows (ratings, rates) | `sum(x * w) / sum(w)` |
+| [Duplicate rows vs key clashes](patterns/duplicate_rows/query.sql) | Telling re-delivered rows from conflicting records | `count(*)` vs `count(DISTINCT row)` |
+| [Rank with ties](patterns/rank_with_ties/query.sql) | Choosing between top-N rows and top-N values | `row_number()` vs `rank()` vs `dense_rank()` |
+| [NTILE segments](patterns/ntile_segments/query.sql) | Spend quartiles, deciles, equal-sized test groups | `ntile(n)` with a tie-breaker |
+| [Start/stop pairing](patterns/start_stop_pairing/query.sql) | Machine runs, shifts or jobs from an event log, with lost stops | `lead()` on event type and time |
 
 ## Run them
 
