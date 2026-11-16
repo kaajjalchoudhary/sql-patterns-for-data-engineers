@@ -1,0 +1,4 @@
+event_id,row_count,distinct_versions,issue
+1,2,1,exact copy
+3,3,1,exact copy
+4,2,2,key clash
