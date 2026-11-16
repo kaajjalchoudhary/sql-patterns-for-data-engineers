@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml/badge.svg)](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml)
 
-Thirty-six SQL patterns that come up again and again in data pipelines and interviews. Each one has
+Forty-six SQL patterns that come up again and again in data pipelines and interviews. Each one has
 sample data, a commented query and the expected result, and CI runs every query on DuckDB to
 prove it works.
 
@@ -44,6 +44,16 @@ prove it works.
 | [Rank with ties](patterns/rank_with_ties/query.sql) | Choosing between top-N rows and top-N values | `row_number()` vs `rank()` vs `dense_rank()` |
 | [NTILE segments](patterns/ntile_segments/query.sql) | Spend quartiles, deciles, equal-sized test groups | `ntile(n)` with a tie-breaker |
 | [Start/stop pairing](patterns/start_stop_pairing/query.sql) | Machine runs, shifts or jobs from an event log, with lost stops | `lead()` on event type and time |
+| [Year-to-date totals](patterns/year_to_date/query.sql) | YTD next to all-time running totals, restarting each January | running `sum()` partitioned by year |
+| [Inventory balance](patterns/inventory_balance/query.sql) | Stock on hand after each movement, catching oversold SKUs | running `sum()` + negative-balance flag |
+| [Bill of materials explosion](patterns/bom_explosion/query.sql) | Total base parts needed to build one product | `WITH RECURSIVE` multiplying quantities |
+| [Nth event per entity](patterns/nth_event/query.sql) | Second purchase, third login, time to repeat buyer | `row_number()` + `LEFT JOIN` on order number |
+| [String aggregation](patterns/string_aggregation/query.sql) | One delimited list per key for exports and reviews | `string_agg(... ORDER BY ...)` |
+| [Expand ranges to rows](patterns/expand_ranges/query.sql) | Serial-number or ticket ranges to one row per value | recursive CTE (or `generate_series`) |
+| [Percent of total](patterns/percent_of_total/query.sql) | Share of group and share of grand total in one pass | `sum() OVER (PARTITION BY ...)` and `OVER ()` |
+| [New vs returning customers](patterns/new_vs_returning/query.sql) | Monthly active users split by first-time and repeat | first month per customer + `CASE` counts |
+| [Drawdown from peak](patterns/drawdown/query.sql) | Balance or KPI decline from its running high | running `max()` |
+| [Top N plus 'Other'](patterns/top_n_with_other/query.sql) | Chart-ready top categories with the long tail folded in | `row_number()` + relabel + `GROUP BY` |
 
 ## Run them
 
