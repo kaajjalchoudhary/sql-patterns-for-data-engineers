@@ -1,0 +1,6 @@
+region,product,revenue,pct_of_region,pct_of_total
+EU,laptop,600,60.0,33.3
+EU,phone,300,30.0,16.7
+EU,tablet,100,10.0,5.6
+ME,phone,600,75.0,33.3
+ME,laptop,200,25.0,11.1
