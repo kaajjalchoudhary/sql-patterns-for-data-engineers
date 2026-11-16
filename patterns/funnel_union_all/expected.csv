@@ -1,0 +1,10 @@
+device,step,step_name,users,conversion_from_start,conversion_from_previous
+All devices,1,visit,6,1.0,
+All devices,2,signup,4,0.667,0.667
+All devices,3,purchase,2,0.333,0.5
+desktop,1,visit,2,1.0,
+desktop,2,signup,2,1.0,1.0
+desktop,3,purchase,1,0.5,0.5
+mobile,1,visit,4,1.0,
+mobile,2,signup,2,0.5,0.5
+mobile,3,purchase,1,0.25,0.5
