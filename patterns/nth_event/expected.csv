@@ -1,0 +1,4 @@
+customer_id,first_order_date,second_order_date,second_order_amount
+10,2025-01-03,2025-01-20,25
+20,2025-01-07,,
+30,2025-01-09,2025-03-02,35
