@@ -1,0 +1,4 @@
+customer_id,usual_payment_method,times_used
+100,card,2
+200,cash,2
+300,card,1
