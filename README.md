@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml/badge.svg)](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml)
 
-Forty-six SQL patterns that come up again and again in data pipelines and interviews. Each one has
+Forty-seven SQL patterns that come up again and again in data pipelines and interviews. Each one has
 sample data, a commented query and the expected result, and CI runs every query on DuckDB to
 prove it works.
 
@@ -16,6 +16,7 @@ prove it works.
 | [SCD Type 2](patterns/scd_type2/query.sql) | Dimension history from snapshots | `IS DISTINCT FROM` + `lead()` |
 | [Date spine](patterns/date_spine/query.sql) | Daily charts with no missing days, cumulative metrics | `generate_series` + `LEFT JOIN` |
 | [Funnel conversion](patterns/funnel_conversion/query.sql) | Signup and checkout funnels where step order matters | chained `LEFT JOIN` on time + `lag()` |
+| [Funnel with UNION ALL](patterns/funnel_union_all/query.sql) | Step-by-step funnel with a per-device breakdown and an overall total | one `SELECT` per step stacked with `UNION ALL` |
 | [Snapshot diff (CDC)](patterns/snapshot_diff/query.sql) | Inserts, updates and deletes between two full extracts | `FULL OUTER JOIN` + `IS DISTINCT FROM` |
 | [Pivot](patterns/pivot/query.sql) | Quarter-by-region reports, wide feature tables | `sum() FILTER (WHERE ...)` |
 | [Cohort retention](patterns/cohort_retention/query.sql) | Monthly retention curves by signup cohort | `date_trunc` + `date_diff` |
