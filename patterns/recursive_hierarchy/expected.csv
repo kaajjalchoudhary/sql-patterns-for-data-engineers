@@ -1,0 +1,8 @@
+employee_id,name,depth,path
+1,Amira,0,Amira
+2,Bilal,1,Amira > Bilal
+4,Divya,2,Amira > Bilal > Divya
+6,Farah,3,Amira > Bilal > Divya > Farah
+5,Eitan,2,Amira > Bilal > Eitan
+3,Chen,1,Amira > Chen
+7,Gwen,2,Amira > Chen > Gwen
