@@ -1,0 +1,6 @@
+machine,run_start,run_end,status
+press-1,2025-05-01 08:00:00,2025-05-01 09:30:00,complete
+press-1,2025-05-01 10:00:00,2025-05-01 12:00:00,complete
+press-2,2025-05-01 08:15:00,,missing stop
+press-2,2025-05-01 08:20:00,2025-05-01 11:00:00,complete
+press-2,2025-05-01 13:00:00,,open
