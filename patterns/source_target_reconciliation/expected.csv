@@ -1,0 +1,5 @@
+load_date,rows_src,rows_tgt,amount_diff,status
+2025-03-01,2,2,0,ok
+2025-03-02,2,1,30,mismatch
+2025-03-03,1,0,90,missing in target
+2025-03-04,0,1,-10,only in target
