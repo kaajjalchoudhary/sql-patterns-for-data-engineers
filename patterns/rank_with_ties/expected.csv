@@ -1,0 +1,7 @@
+student,score,row_num,rnk,dense_rnk
+Ana,95,1,1,1
+Ben,90,2,2,2
+Cara,90,3,2,2
+Dev,85,4,4,3
+Eli,80,5,5,4
+Fay,80,6,5,4
