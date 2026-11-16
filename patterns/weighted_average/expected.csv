@@ -1,0 +1,4 @@
+product,total_reviews,naive_avg,weighted_avg
+blender,100,3.5,3.8
+kettle,200,3.33,3.85
+toaster,3,3.0,3.67
