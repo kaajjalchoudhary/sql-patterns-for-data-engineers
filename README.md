@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml/badge.svg)](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml)
 
-Forty-seven SQL patterns that come up again and again in data pipelines and interviews. Each one has
+Forty-eight SQL patterns that come up again and again in data pipelines and interviews. Each one has
 sample data, a commented query and the expected result, and CI runs every query on DuckDB to
 prove it works.
 
@@ -55,6 +55,7 @@ prove it works.
 | [New vs returning customers](patterns/new_vs_returning/query.sql) | Monthly active users split by first-time and repeat | first month per customer + `CASE` counts |
 | [Drawdown from peak](patterns/drawdown/query.sql) | Balance or KPI decline from its running high | running `max()` |
 | [Top N plus 'Other'](patterns/top_n_with_other/query.sql) | Chart-ready top categories with the long tail folded in | `row_number()` + relabel + `GROUP BY` |
+| [Time between events](patterns/time_between_events/query.sql) | Days since the previous order, repeat vs reactivated customers | `lag()` + `date_diff()` |
 
 ## Run them
 
