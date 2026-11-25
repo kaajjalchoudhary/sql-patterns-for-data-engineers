@@ -1,0 +1,6 @@
+region,store,revenue,region_avg,diff_from_avg,vs_region
+North,N1,100,120,-20,below
+North,N2,140,120,20,above
+North,N3,120,120,0,at
+South,S1,80,90,-10,below
+South,S2,100,90,10,above
