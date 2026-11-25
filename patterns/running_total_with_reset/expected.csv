@@ -1,0 +1,9 @@
+customer_id,event_date,event_type,points,balance
+A,2025-01-01,earn,50,50
+A,2025-01-03,earn,30,80
+A,2025-01-04,redeem,80,0
+A,2025-01-06,earn,20,20
+A,2025-01-08,earn,10,30
+B,2025-01-02,earn,40,40
+B,2025-01-05,earn,25,65
+B,2025-01-07,earn,15,80
