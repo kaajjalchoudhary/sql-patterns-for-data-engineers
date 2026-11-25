@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml/badge.svg)](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml)
 
-Forty-nine SQL patterns that come up again and again in data pipelines and interviews. Each one has
+Fifty-two SQL patterns that come up again and again in data pipelines and interviews. Each one has
 sample data, a commented query and the expected result, and CI runs every query on DuckDB to
 prove it works.
 
@@ -57,6 +57,9 @@ prove it works.
 | [Top N plus 'Other'](patterns/top_n_with_other/query.sql) | Chart-ready top categories with the long tail folded in | `row_number()` + relabel + `GROUP BY` |
 | [Time between events](patterns/time_between_events/query.sql) | Days since the previous order, repeat vs reactivated customers | `lag()` + `date_diff()` |
 | [Running total with reset](patterns/running_total_with_reset/query.sql) | Loyalty points, streak counters or budgets that restart after a reset event | running count of resets as a group key + running `sum()` |
+| [Cumulative distinct count](patterns/cumulative_distinct_count/query.sql) | Running total of unique customers, users or devices seen so far | first-seen date + running `sum()` (no `count(DISTINCT)` window) |
+| [Compare to group average](patterns/compare_to_group_average/query.sql) | Stores, products or employees above or below their group's average | `avg() OVER (PARTITION BY ...)` + `CASE` |
+| [Column null profile](patterns/column_null_profile/query.sql) | Completeness checks on a new source or as a quality gate | `count(*) - count(col)` + `count(DISTINCT col)` |
 
 ## Run them
 
