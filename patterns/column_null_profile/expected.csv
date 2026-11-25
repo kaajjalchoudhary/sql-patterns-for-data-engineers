@@ -1,0 +1,4 @@
+column_name,total_rows,null_count,null_pct,distinct_values
+country,5,1,20,2
+email,5,1,20,3
+phone,5,3,60,2
