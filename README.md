@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml/badge.svg)](https://github.com/kaajjalchoudhary/sql-patterns-for-data-engineers/actions/workflows/ci.yml)
 
-Forty-eight SQL patterns that come up again and again in data pipelines and interviews. Each one has
+Forty-nine SQL patterns that come up again and again in data pipelines and interviews. Each one has
 sample data, a commented query and the expected result, and CI runs every query on DuckDB to
 prove it works.
 
@@ -56,6 +56,7 @@ prove it works.
 | [Drawdown from peak](patterns/drawdown/query.sql) | Balance or KPI decline from its running high | running `max()` |
 | [Top N plus 'Other'](patterns/top_n_with_other/query.sql) | Chart-ready top categories with the long tail folded in | `row_number()` + relabel + `GROUP BY` |
 | [Time between events](patterns/time_between_events/query.sql) | Days since the previous order, repeat vs reactivated customers | `lag()` + `date_diff()` |
+| [Running total with reset](patterns/running_total_with_reset/query.sql) | Loyalty points, streak counters or budgets that restart after a reset event | running count of resets as a group key + running `sum()` |
 
 ## Run them
 
